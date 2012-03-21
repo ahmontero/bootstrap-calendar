@@ -1,7 +1,7 @@
 
 [Bootstrap Calendar](http://github.com/ahmontero/bootstrap-calendar)
 =================
-The aim of this plugin is to have a simple calendar to show events using Bootstrap. It can be improved for sure. You are welcome to do it!
+The aim of this plugin is to have a simple calendar to show events using Bootstrap. For sure it can be improved, and you are welcome to do it!
 
 
 
