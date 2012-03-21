@@ -2,13 +2,19 @@
 =================
 The aim of this plugin is to have a simple calendar to show events using Bootstrap. It can be improved for sure. You are welcome to do it!
 
+
+
 Requisites
 -----------
-· Bootstrap (http://github.com/twitter/bootstrap)
-· jQuery (http://jquery.com/)
+
++ Bootstrap (http://github.com/twitter/bootstrap)
++ jQuery (http://jquery.com/)
+
+
 
 Quick start
 -----------
+`
 .
 .
 .
@@ -36,11 +42,16 @@ $('#calendar').Calendar({ 'events': evnts, 'weekStart': 1 })
 .
 .
 .
+`
+
+
 
 Parameters
------------
+------------
+`
 weekStart: 1|2|3|4|5|6|7
 msg_days: Text for week days. Default: ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"]
 msg_months: Text for months. Default: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 msg_today: Text for 'Today' button. Default: 'Today'
 events: Events to show in the calendar. Format: {"event":[{"date":"2012-01-25", "title":"1"}]}
+`
