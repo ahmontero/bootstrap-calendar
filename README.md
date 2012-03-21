@@ -15,9 +15,6 @@ Requisites
 Quick start
 -----------
 
-.
-.
-.
 
 var evnts = function(){
               return {
@@ -40,13 +37,8 @@ $('#calendar').Calendar({ 'events': evnts, 'weekStart': 1 })
          .on('onPrev', function(event){ alert("Prev"); })
 
          .on('onCurrent', function(event){ alert("Current"); });
-.
-.
-.
+
 <div id="calendar"></div>
-.
-.
-.
 
 
 
