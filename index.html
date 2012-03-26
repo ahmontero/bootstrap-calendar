@@ -1,5 +1,95 @@
 <html lang="en"><head>
     <meta charset="utf-8">
+    <title>ahmontero/boostrap-calendar @ GitHub</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="description">
+    <meta content="" name="author">
+
+    <link rel="stylesheet" href="https://raw.github.com/ahmontero/boostrap-calendar/master/demo/css/bootstrap.css" type="text/css" />
+    <style>
+      body {
+        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+      }
+    </style>
+    <link rel="stylesheet" href="https://raw.github.com/ahmontero/boostrap-calendar/master/src/css/bootstrap.calendar.css" type="text/css" />
+
+
+     <!-- jQuery and the Calendar plugin files -->
+    <script type="text/javascript" src="https://raw.github.com/ahmontero/boostrap-calendar/master/demo/js/jquery.js" ></script>
+    <script type="text/javascript" src="https://raw.github.com/ahmontero/boostrap-calendar/master/demo/js/bootstrap.js" ></script>
+    <script type="text/javascript" src="https://raw.github.com/ahmontero/boostrap-calendar/master/src/bootstrap.calendar.js" ></script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+
+          var evnts = function(){
+              return {
+                      "event":
+                          [
+                               {"date":"2012-01-25","title":"1"}
+                              ,{"date":"2012-02-01","title":"2"}
+                              ,{"date":"2012-03-22","title":"34"}
+                              ,{"date":"2012-04-03","title":"123"}
+                              ,{"date":"2012-05-04","title":"223"}
+                              ,{"date":"2012-06-28","title":"4"}
+                              ,{"date":"2012-07-28","title":"5"}
+                              ,{"date":"2012-08-16","title":"14"}
+                              ,{"date":"2012-09-21","title":"10"}
+                              ,{"date":"2012-10-21","title":"10"}
+                              ,{"date":"2012-11-21","title":"10"}
+                              ,{"date":"2012-12-21","title":"10"}
+                          ]
+                      }
+          };
+
+         $('#calendar').Calendar({ 'events': evnts, 'weekStart': 1 })
+         .on('changeDay', function(event){ alert(event.day.valueOf()); })
+         .on('onEvent', function(event){ alert(event.day.valueOf()); })
+         .on('onNext', function(event){ alert("Next"); })
+         .on('onPrev', function(event){ alert("Prev"); })
+         .on('onCurrent', function(event){ alert("Current"); });
+      });
+
+    </script>
+  </head>
+
+  <body data-offset="50" data-target=".subnav" data-spy="scroll" data-twttr-rendered="true">
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a href="#" class="brand">Project name</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="span4" id="calendar"></div>
+      </div>
+    </div> <!-- /container -->
+
+</body>
+</html>
+
+
+
+
+
+<html lang="en"><head>
+    <meta charset="utf-8">
     <title>Bootstrap, from Twitter</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="description">
@@ -25,10 +115,7 @@ var pageTracker = _gat._getTracker("UA-12714284-1");
 pageTracker._trackPageview();
 } catch(err) {}</script>
 
-    <!-- jQuery and the Calendar plugin files -->
-    <script type="text/javascript" src="https://raw.github.com/ahmontero/boostrap-calendar/master/demo/js/jquery.js" ></script>
-    <script type="text/javascript" src="https://raw.github.com/ahmontero/boostrap-calendar/master/demo/js/bootstrap.js" ></script>
-    <script type="text/javascript" src="https://raw.github.com/ahmontero/boostrap-calendar/master/src/bootstrap.calendar.js" ></script>
+   
 
     <script type="text/javascript">
         $(document).ready(function(){
