@@ -12,6 +12,9 @@ Requisites
 + jQuery (http://jquery.com/)
 
 
+Demo
+====
+You can try it [here] (http://ahmontero.github.com/boostrap-calendar/)
 
 Quick start
 ===========
