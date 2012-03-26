@@ -4,6 +4,10 @@
 The aim of this plugin is to have a simple calendar to show events using Bootstrap. For sure it can be improved, and you are welcome to do it!
 
 
+Demo
+====
+You can try it [here] (http://ahmontero.github.com/boostrap-calendar/)
+
 
 Requisites
 ==========
@@ -11,10 +15,6 @@ Requisites
 + Bootstrap (http://github.com/twitter/bootstrap)
 + jQuery (http://jquery.com/)
 
-
-Demo
-====
-You can try it [here] (http://ahmontero.github.com/boostrap-calendar/)
 
 Quick start
 ===========
