@@ -1,88 +1,86 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset='utf-8'>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <title>Bootstrap, from Twitter</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="description">
+    <meta content="" name="author">
 
-  <title>ahmontero/boostrap-calendar @ GitHub</title>
+    <link rel="stylesheet" href="./css/bootstrap.css" type="text/css" />
+    <style>
+      body {
+        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+      }
+    </style>
+    <link rel="stylesheet" href="../src/css/bootstrap.calendar.css" type="text/css" />
 
-  <style type="text/css">
-    body {
-      margin-top: 1.0em;
-      background-color: #80961d;
-      font-family: Helvetica, Arial, FreeSans, san-serif;
-      color: #ffffff;
-    }
-    #container {
-      margin: 0 auto;
-      width: 700px;
-    }
-    h1 { font-size: 3.8em; color: #7f69e2; margin-bottom: 3px; }
-    h1 .small { font-size: 0.4em; }
-    h1 a { text-decoration: none }
-    h2 { font-size: 1.5em; color: #7f69e2; }
-    h3 { text-align: center; color: #7f69e2; }
-    a { color: #7f69e2; }
-    .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
-    .download { float: right; }
-    pre { background: #000; color: #fff; padding: 15px;}
-    hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
-    .footer { text-align:center; padding-top:30px; font-style: italic; }
-  </style>
-</head>
 
-<body>
-  <a href="https://github.com/ahmontero/boostrap-calendar"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
+    <!-- jQuery and the Calendar plugin files -->
+    <script type="text/javascript" src="./js/jquery.js" ></script>
+    <script type="text/javascript" src="./js/bootstrap.js" ></script>
+    <script type="text/javascript" src="../src/bootstrap.calendar.js" ></script>
 
-  <div id="container">
+    <script type="text/javascript">
+        $(document).ready(function(){
 
-    <div class="download">
-      <a href="https://github.com/ahmontero/boostrap-calendar/zipball/master">
-        <img border="0" width="90" src="https://github.com/images/modules/download/zip.png"></a>
-      <a href="https://github.com/ahmontero/boostrap-calendar/tarball/master">
-        <img border="0" width="90" src="https://github.com/images/modules/download/tar.png"></a>
+          var evnts = function(){
+              return {
+                      "event":
+                          [
+                               {"date":"2012-01-25","title":"1"}
+                              ,{"date":"2012-02-01","title":"2"}
+                              ,{"date":"2012-03-22","title":"34"}
+                              ,{"date":"2012-04-03","title":"123"}
+                              ,{"date":"2012-05-04","title":"223"}
+                              ,{"date":"2012-06-28","title":"4"}
+                              ,{"date":"2012-07-28","title":"5"}
+                              ,{"date":"2012-08-16","title":"14"}
+                              ,{"date":"2012-09-21","title":"10"}
+                              ,{"date":"2012-10-21","title":"10"}
+                              ,{"date":"2012-11-21","title":"10"}
+                              ,{"date":"2012-12-21","title":"10"}
+                          ]
+                      }
+          };
+
+         $('#calendar').Calendar({ 'events': evnts, 'weekStart': 1 })
+         .on('changeDay', function(event){ alert(event.day.valueOf()); })
+         .on('onEvent', function(event){ alert(event.day.valueOf()); })
+         .on('onNext', function(event){ alert("Next"); })
+         .on('onPrev', function(event){ alert("Prev"); })
+         .on('onCurrent', function(event){ alert("Current"); });
+      });
+
+    </script>
+  </head>
+
+  <body data-offset="50" data-target=".subnav" data-spy="scroll" data-twttr-rendered="true">
+    <a href="https://github.com/ahmontero/boostrap-calendar"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a href="#" class="brand">Project name</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
     </div>
 
-    <h1><a href="https://github.com/ahmontero/boostrap-calendar">boostrap-calendar</a>
-      <span class="small">by <a href="https://github.com/ahmontero">ahmontero</a></span></h1>
-
-    <div class="description">
-      Calendar to visualize data using some bootstrap styles.
-    </div>
-
-    
-
-    
-
-    
-
-    
-
-    
-      <h2>Authors</h2>
-      <p>ahmontero (antonio.hinojo.montero@gmail.com)<br/>      </p>
-    
-
-    
-      <h2>Contact</h2>
-      <p>Antonio H Montero (antonio.hinojo.montero@gmail.com)<br/>      </p>
-    
-
-    <h2>Download</h2>
-    <p>
-      You can download this project in either
-      <a href="https://github.com/ahmontero/boostrap-calendar/zipball/master">zip</a> or
-      <a href="https://github.com/ahmontero/boostrap-calendar/tarball/master">tar formats.
-    </p>
-    <p>You can also clone the project with <a href="http://git-scm.com">Git</a>
-      by running:
-      <pre>$ git clone git://github.com/ahmontero/boostrap-calendar</pre>
-    </p>
-
-    <div class="footer">
-      get the source code on GitHub : <a href="https://github.com/ahmontero/boostrap-calendar">ahmontero/boostrap-calendar</a>
-    </div>
-
-  </div>
+    <div class="container">
+      <div class="row">
+        <div class="span4" id="calendar"></div>
+      </div>
+    </div> <!-- /container -->
 
 <script type="text/javascript">
 var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
@@ -92,6 +90,6 @@ document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.
 try {
 var pageTracker = _gat._getTracker("UA-12714284-1");
 pageTracker._trackPageview();
-} catch(err) {}</script>"
+} catch(err) {}</script>
 </body>
 </html>
