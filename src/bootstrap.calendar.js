@@ -32,6 +32,7 @@
             msg_days: ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"],
             msg_months: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
             msg_today: 'Today',
+            msg_events_header: 'Events Today',
             events: null
         },
 
@@ -78,6 +79,7 @@
         this.weekStart = this.options.weekStart||1;
         this.days = this.options.msg_days;
         this.months = this.options.msg_months;
+        this.msg_events_hdr = this.options.msg_events_header;
         this.events = this.options.events;
 
         this.calendar = $(template).appendTo(this.element).on({
@@ -106,6 +108,7 @@
 
     Plugin.prototype.renderEvents = function (events, elem) {
         var live_date = this.live_date;
+        var msg_evnts_hdr = this.msg_events_hdr;
         for(var i=0; i<daysInMonth[live_date.getMonth()]; i++){
             $.each(events.event, function(){
                 var year = 1900 + live_date.getYear();
@@ -123,7 +126,12 @@
                     .removeClass("day")
                     .addClass('holiday')
                     .empty()
-                    .append('<span class="weekday">' +i+ '</span>');
+                    .append('<span class="weekday">' +i+ '</span>')
+                    .popover({
+                        'title': msg_evnts_hdr,
+                        'content': 'You have ' +this.title+ ' appointments',
+                        'delay': { 'show': 250, 'hide': 250 }
+                    });
                 }
             });
         }
@@ -336,4 +344,6 @@
     }
 
 })( jQuery, window, document );
+
+
 
