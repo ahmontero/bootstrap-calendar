@@ -54,5 +54,7 @@ msg_months: Text for months. Default: ["January", "February", "March", "April", 
 
 msg_today: Text for 'Today' button. Default: 'Today'
 
+msg_events_header: Text for events header. Default: 'Events Today',
+
 events: Events to show in the calendar. Format: {"event":[{"date":"2012-01-25", "title":"1"}]}
 </pre>
