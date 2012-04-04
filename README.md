@@ -6,7 +6,7 @@ The aim of this plugin is to have a simple calendar to show events using Bootstr
 
 Demo
 ====
-You can try it [here] (http://ahmontero.github.com/boostrap-calendar/)
+You can try it [here] (http://ahmontero.github.com/bootstrap-calendar/)
 
 
 Requisites
