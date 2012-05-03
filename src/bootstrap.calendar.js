@@ -263,7 +263,13 @@
                                 type: 'onEvent',
                                 day: day,
                             });
-                        }
+                        }else if(target.is('.today')){
+			    var day = parseInt(target.text(), 10)||1;
+			    this.element.trigger({
+                                type: 'onEvent',
+                                day: day,
+                            });
+			}
                         break;
                     case 'th':
                         if (target.is('.sel')){
