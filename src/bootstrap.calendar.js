@@ -117,9 +117,9 @@
                 var view_date = new Date(year, month, i==0?1:i, 0,0,0,0);
                 var event_date = new Date(this.date);
 
-                if( event_date.getDate() == view_date.getDate()
-                    && event_date.getMonth() == view_date.getMonth()
-                    && event_date.getFullYear() == view_date.getFullYear()
+                if( event_date.getUTCDate() == view_date.getUTCDate()
+                    && event_date.getUTCMonth() == view_date.getUTCMonth()
+                    && event_date.getUTCFullYear() == view_date.getUTCFullYear()
 
                 ){
                     elem.parent('div:first').find('#day_' + i)
