@@ -282,7 +282,7 @@
                             var year = parseInt(target.attr('year'), 10)||1;
 
 			                this.element.trigger({
-                                type: 'onEvent',
+                                type: 'changeDay',
                                 day: day,
                                 month: month,
                                 year: year,
