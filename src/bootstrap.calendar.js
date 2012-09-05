@@ -40,20 +40,6 @@
             events: null
         },
 
-        template =  ''+
-                        '<h1 class="year"></h1>'+
-                        '<h3 class="month"></h3>'+
-                        '<table class="calendar" id="calendar">'+
-                            '<thead class="calendar-header"></thead>'+
-                            '<tbody class="calendar-body"></tbody>'+
-                            '<tfoot>'+
-                                '<th colspan="2" class="sel" id="last"><div class="arrow"><i class="icon-arrow-left"></i></div></th>'+
-                                '<th colspan="3" class="sel" id="current">' +defaults.msg_today+ '</th>'+
-                                '<th colspan="2" class="sel" id="next"><div class="arrow"><i class="icon-arrow-right"></i></div></th>'+
-                            '</tfoot>'+
-                        '</table>'+
-                    '',
-
         daysInMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31],
 
         today = new Date();
@@ -85,7 +71,19 @@
         this.months = this.options.msg_months;
         this.msg_events_hdr = this.options.msg_events_header;
         this.events = this.options.events;
-
+        var template =  ''+
+                        '<h1 class="year"></h1>'+
+                        '<h3 class="month"></h3>'+
+                        '<table class="calendar" id="calendar">'+
+                            '<thead class="calendar-header"></thead>'+
+                            '<tbody class="calendar-body"></tbody>'+
+                            '<tfoot>'+
+                                '<th colspan="2" class="sel" id="last"><div class="arrow"><i class="icon-arrow-left"></i></div></th>'+
+                                '<th colspan="3" class="sel" id="current">' +this.options.msg_today+ '</th>'+
+                                '<th colspan="2" class="sel" id="next"><div class="arrow"><i class="icon-arrow-right"></i></div></th>'+
+                            '</tfoot>'+
+                        '</table>'+
+                    '',
         this.calendar = $(template).appendTo(this.element).on({
                                 click: $.proxy(this.click, this)
                         });
