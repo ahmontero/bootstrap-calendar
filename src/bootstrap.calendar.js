@@ -1,4 +1,8 @@
 /*!
+ * bootstrap-calendar plugin
+ * Original author: @ahmontero
+ * Licensed under the MIT license
+ *
  * jQuery lightweight plugin boilerplate
  * Original author: @ajpiano
  * Further changes, comments: @addyosmani
