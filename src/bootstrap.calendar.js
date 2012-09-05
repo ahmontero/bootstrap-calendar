@@ -48,7 +48,7 @@
                             '<tbody class="calendar-body"></tbody>'+
                             '<tfoot>'+
                                 '<th colspan="2" class="sel" id="last"><div class="arrow"><i class="icon-arrow-left"></i></div></th>'+
-                                '<th colspan="3" class="sel" id="current">' +defaults.msg_today+ '</th>'+
+                                '<th colspan="3" class="sel" id="current">' +this.msg_today+ '</th>'+
                                 '<th colspan="2" class="sel" id="next"><div class="arrow"><i class="icon-arrow-right"></i></div></th>'+
                             '</tfoot>'+
                         '</table>'+
@@ -83,6 +83,7 @@
         this.weekStart = this.options.weekStart||1;
         this.days = this.options.msg_days;
         this.months = this.options.msg_months;
+        this.msg_today = this.options.msg_today;        
         this.msg_events_hdr = this.options.msg_events_header;
         this.events = this.options.events;
 
