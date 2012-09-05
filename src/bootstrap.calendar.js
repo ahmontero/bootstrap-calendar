@@ -114,12 +114,12 @@
     Plugin.prototype.renderEvents = function (events, elem) {
         var live_date = this.live_date;
         var msg_evnts_hdr = this.msg_events_hdr;
-        for(var i=0; i<daysInMonth[live_date.getMonth()]; i++){
+        for(var i=1; i<=daysInMonth[live_date.getMonth()]; i++){
             $.each(events.event, function(){
                 var year = 1900 + live_date.getYear();
                 var month = live_date.getMonth();
 
-                var view_date = new Date(year, month, i==0?1:i, 0,0,0,0);
+                var view_date = new Date(year, month, i, 0,0,0,0);
                 var event_date = new Date(this.date);
 
                 if( event_date.getDate() == view_date.getDate()
