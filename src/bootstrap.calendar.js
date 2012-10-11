@@ -48,7 +48,7 @@
                             '<tbody class="calendar-body"></tbody>'+
                             '<tfoot>'+
                                 '<th colspan="2" class="sel" id="last"><div class="arrow"><i class="icon-arrow-left"></i></div></th>'+
-                                '<th colspan="3" class="sel" id="current">' +this.msg_today+ '</th>'+
+                                '<th colspan="3" class="sel" id="current">' +defaults.msg_today+ '</th>'+
                                 '<th colspan="2" class="sel" id="next"><div class="arrow"><i class="icon-arrow-right"></i></div></th>'+
                             '</tfoot>'+
                         '</table>'+
