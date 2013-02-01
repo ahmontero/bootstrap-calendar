@@ -48,7 +48,7 @@
                             '<tbody class="calendar-body"></tbody>'+
                             '<tfoot>'+
                                 '<th colspan="2" class="sel" id="last"><div class="arrow"><i class="icon-arrow-left"></i></div></th>'+
-                                '<th colspan="3" class="sel" id="current">' +defaults.msg_today+ '</th>'+
+                                '<th colspan="3" class="sel" id="current">%msg_today%</th>'+
                                 '<th colspan="2" class="sel" id="next"><div class="arrow"><i class="icon-arrow-right"></i></div></th>'+
                             '</tfoot>'+
                         '</table>'+
@@ -87,7 +87,7 @@
         this.msg_events_hdr = this.options.msg_events_header;
         this.events = this.options.events;
 
-        this.calendar = $(template).appendTo(this.element).on({
+        this.calendar = $(template.replace("%msg_today%",this.msg_today)).appendTo(this.element).on({
                                 click: $.proxy(this.click, this)
                         });
 
