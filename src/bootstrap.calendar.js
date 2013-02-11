@@ -213,7 +213,7 @@
                     ){
                         cls = "today";
                     }else if(j%7 == 0 || j%7 == 6){
-                        cls = "weekend";
+                        cls = "day weekend";
                     }else{
                         cls = "day";
                     }
