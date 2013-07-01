@@ -207,8 +207,8 @@
                     if(
                         today.getDate() == date.getDate()
                         && dow == date.getDate()
-                        && date.getMonth() == date.getMonth()
-                        && date.getFullYear() == date.getFullYear()
+                        && today.getMonth() == date.getMonth()
+                        && today.getFullYear() == date.getFullYear()
 
                     ){
                         cls = "today";
