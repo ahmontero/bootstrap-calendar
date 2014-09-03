@@ -152,7 +152,6 @@
 
     Plugin.prototype.renderCalendar = function (date) {
         var mon = new Date(this.yy, this.mm, 1);
-        var live_date = this.live_date;
 
         this.element.parent('div:first').find('.year').empty();
         this.element.parent('div:first').find('.month').empty();
@@ -173,7 +172,6 @@
         this.renderDays();
 
         var fdom = mon.getDay(); // First day of month
-        var mwks = 6 // Weeks in month
 
         // Render days
         var dow = 0;
@@ -185,9 +183,9 @@
 
             for(var j=this.weekStart; j<this.days.length + this.weekStart; j++){
 
-                cls = "";
-                msg = "";
-                id = "";
+                var cls = "";
+                var msg = "";
+                var id = "";
 
                 // Determine if we have reached the first of the month
                 if(first >= daysInMonth[mon.getMonth()]){
@@ -222,8 +220,8 @@
                 // Set ID
                 id = "day_" + dow;
 
-                month_ = date.getMonth() + 1;
-                year = date.getFullYear();
+                var month_ = date.getMonth() + 1;
+                var year = date.getFullYear();
 
                 // Render HTML
                 if(dow == 0){
@@ -257,42 +255,43 @@
             var target = $(e.target).closest('td, th');
 
             if (target.length == 1) {
+                var day, month, year;
                 switch(target[0].nodeName.toLowerCase()) {
                     case 'td':
                         if (target.is('.day')){
-                            var day = parseInt(target.attr('day'), 10)||1;
-                            var month = parseInt(target.attr('month'), 10)||1;
-                            var year = parseInt(target.attr('year'), 10)||1;
+                            day = parseInt(target.attr('day'), 10)||1;
+                            month = parseInt(target.attr('month'), 10)||1;
+                            year = parseInt(target.attr('year'), 10)||1;
 
                             this.element.trigger({
                                 type: 'changeDay',
                                 day: day,
                                 month: month,
-                                year: year,
+                                year: year
                             });
                         }else if(target.is('.holiday')){
-                            var day = parseInt(target.attr('day'), 10)||1;
-                            var month = parseInt(target.attr('month'), 10)||1;
-                            var year = parseInt(target.attr('year'), 10)||1;
+                            day = parseInt(target.attr('day'), 10)||1;
+                            month = parseInt(target.attr('month'), 10)||1;
+                            year = parseInt(target.attr('year'), 10)||1;
 
                             this.element.trigger({
                                 type: 'onEvent',
                                 day: day,
                                 month: month,
-                                year: year,
+                                year: year
                             });
                         }else if(target.is('.today')){
-			                var day = parseInt(target.attr('day'), 10)||1;
-                            var month = parseInt(target.attr('month'), 10)||1;
-                            var year = parseInt(target.attr('year'), 10)||1;
+                            day = parseInt(target.attr('day'), 10)||1;
+                            month = parseInt(target.attr('month'), 10)||1;
+                            year = parseInt(target.attr('year'), 10)||1;
 
-			                this.element.trigger({
+                            this.element.trigger({
                                 type: 'changeDay',
                                 day: day,
                                 month: month,
-                                year: year,
+                                year: year
                             });
-			}
+            }
                         break;
                     case 'th':
                         if (target.is('.sel')){
@@ -303,7 +302,7 @@
                                     this.live_date = prv;
                                     this.renderCalendar(prv, this.events);
                                     this.element.trigger({
-                                        type: 'onPrev',
+                                        type: 'onPrev'
                                     });
                                     break;
                                 case 'current':
@@ -312,7 +311,7 @@
                                     this.live_date = now;
                                     this.renderCalendar(now, this.events);
                                     this.element.trigger({
-                                        type: 'onCurrent',
+                                        type: 'onCurrent'
                                     });
                                     break;
                                 case 'next':
@@ -321,13 +320,17 @@
                                     this.live_date = nxt;
                                     this.renderCalendar(nxt, this.events);
                                     this.element.trigger({
-                                        type: 'onNext',
+                                        type: 'onNext'
                                     });
-                                    break
+                                    break;
+                                default:
+                                    break;
                             }
                         }
                         break;
                     break;
+                default:
+                        break;
                 }
             }
     };
@@ -343,6 +346,8 @@
                 now = new Date(this.yy, this.mm+1, 1);
                 break;
             case 'crt':
+                break;
+            default:
                 break;
         }
 
@@ -370,6 +375,3 @@
     }
 
 })( jQuery, window, document );
-
-
-
