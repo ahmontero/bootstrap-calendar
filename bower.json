@@ -1,0 +1,22 @@
+{
+  "name": "bootstrap-calendar",
+  "version": "1.0.0",
+  "homepage": "https://github.com/ahmontero/bootstrap-calendar",
+  "authors": [
+    "Antonio H Montero"
+  ],
+  "description": "Calendar to visualize data using some bootstrap styles.",
+  "main": "src/bootstrap.calendar.js",
+  "keywords": [
+    "bootstrap",
+    "calendar"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
